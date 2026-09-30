@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-time weather dashboard using asynchronous JavaScript and REST APIs.">
+  <title>WeatherNow | Real-Time Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="weather-card">
+      <header class="header">
+        <div>
+          <p class="eyebrow">ASYNC JAVASCRIPT • REST API</p>
+          <h1>Weather<span>Now</span></h1>
+          <p class="subtitle">Live weather information for any city.</p>
+        </div>
+        <div class="api-badge">LIVE DATA</div>
+      </header>
+
+      <form id="searchForm" class="search-form">
+        <label class="sr-only" for="cityInput">City name</label>
+        <input
+          id="cityInput"
+          type="search"
+          placeholder="Search city, e.g. Hyderabad"
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+
+      <section id="weatherContent" class="weather-content" aria-live="polite">
+        <div class="welcome">
+          <div class="weather-icon">☁</div>
+          <h2>Search for a city</h2>
+          <p>Enter a city name to view current temperature, humidity, wind speed and more.</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Powered by Open-Meteo</span>
+        <span>Data updates with each search</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
